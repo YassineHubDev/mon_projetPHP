@@ -6,6 +6,8 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+
 
     <title>AD-Installations</title>
 </head>
@@ -14,7 +16,7 @@
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">AD-Installations</a>
+    <a class="navbar-brand" href="#page1">AD-Installations</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -30,11 +32,11 @@
                     Qui sommes-nous ?
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Notre petite histoire</a>
+                    <a class="dropdown-item" href="#page2">Notre petite histoire</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Ahmed</a>
+                    <a class="dropdown-item" href="#page3">Ahmed</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Denis</a>
+                    <a class="dropdown-item" href="#page4">Denis</a>
                 </div>
             </li>
 
@@ -43,20 +45,20 @@
                     Nos spécialités
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Cusine</a>
+                    <a class="dropdown-item" href="#page5">Cusine</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Salle de bain</a>
+                    <a class="dropdown-item" href="#page6">Salle de bain</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Placard</a>
+                    <a class="dropdown-item" href="#page7">Placard</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Autres</a>
+                    <a class="dropdown-item" href="#page8">Autres</a>
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Votre projet</a>
+                <a class="nav-link" href="#page9" tabindex="-1" aria-disabled="true">Références</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Contacts</a>
+                <a class="nav-link" href="#page10" tabindex="-1" aria-disabled="true">Votre espace</a>
             </li>
         </ul>
 

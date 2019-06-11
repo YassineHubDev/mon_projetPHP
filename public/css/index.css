@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+
+#page1 {
+    background: red;
+    height: 100vh;
+    width: 100%;
+    }
+
+#page2 {
+    background: green;
+    height: 100vh;
+    width: 100%;
+}
+
+#page3 {
+    background: cornflowerblue;
+    height: 100vh;
+    width: 100%;
+}
+
+#page4 {
+    background: deeppink;
+    height: 100vh;
+    width: 100%;
+}
+
+#page5 {
+    background: burlywood;
+    height: 100vh;
+    width: 100%;
+}
+
+#page6 {
+    background: mediumpurple;
+    height: 100vh;
+    width: 100%;
+}
+
+#page7 {
+    background: greenyellow;
+    height: 100vh;
+    width: 100%;
+}
+
+#page8 {
+    background: grey;
+    height: 100vh;
+    width: 100%;
+}
+
+#page9 {
+    background: lightpink;
+    height: 100vh;
+    width: 100%;
+}
+
+#page10 {
+    background: orangered;
+    height: 100vh;
+    width: 100%;
+}
+
+
+.carousel-inner img {
+    margin: auto;
+    width: 100%;
+}
+
+form {
+    padding: 25vh 35% 0 35% ;
+}
+
+.connectez {
+    font-size: 25px;
+}
+
+#carouselExampleIndicators {
+    padding-top: 5%;
+    height: 50%;
+    background-color: transparent;
+;
+}
