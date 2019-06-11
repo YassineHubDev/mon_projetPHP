@@ -10,7 +10,7 @@
 }
 
 #page1 {
-    background: red;
+    background: transparent;
     height: 100vh;
     width: 100%;
     }
@@ -64,15 +64,17 @@
 }
 
 #page10 {
-    background: orangered;
+    background: transparent;
     height: 100vh;
     width: 100%;
+    padding-top: 56px;
 }
 
 
 .carousel-inner img {
     margin: auto;
     width: 100%;
+    margin-top: -22%;
 }
 
 form {
@@ -85,7 +87,27 @@ form {
 
 #carouselExampleIndicators {
     padding-top: 5%;
-    height: 50%;
-    background-color: transparent;
-;
+    height: 60%;
+    background-color: black;
+    overflow: hidden;
 }
+
+.coeur {
+    padding: 10px;
+    text-align: center;
+}
+
+p {text-align: justify}
+
+.btn {
+    border-radius: 1.25rem;
+}
+
+.btn-primary {
+    color: white;
+    background-color: #007bff;
+    border-color: #007bff;
+    width: 330px;
+}
+
+

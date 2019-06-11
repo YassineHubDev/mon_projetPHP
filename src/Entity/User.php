@@ -9,6 +9,7 @@ class User
     private $email;
     private $password;
     private $client_nom;
+    private $client_prenom;
     private $magasin_nom;
     private $role;
 
@@ -18,6 +19,22 @@ class User
     public function getEmail()
     {
         return $this->email;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getClientPrenom()
+    {
+        return $this->client_prenom;
+    }
+
+    /**
+     * @param mixed $client_prenom
+     */
+    public function setClientPrenom($client_prenom)
+    {
+        $this->client_prenom = $client_prenom;
     }
 
     /**
@@ -92,6 +109,22 @@ class User
         $this->role = $role;
     }
 
+    public function getStrParamsSQL(): string
+    {
+        // On crée un tableau avec les 3 propriétés
+        $tab = [
+            htmlentities($this->username),
+            htmlentities($this->firstname),
+        htmlentities($this->surname),
+            htmlentities($this->email),
+            htmlentities($this->password)
+        ];
+        // On crée une chaîne de caractères séparés de virgules et les quotes simples
+        $str = implode("','", $tab);
+        // On a ajoute une quote simple au début et une à la fin
+        // On retourne l'ensemble
+        return "'" . $str . "'";
+    }
 
 
 }
