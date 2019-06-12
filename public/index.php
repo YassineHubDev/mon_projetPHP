@@ -8,7 +8,7 @@ use src\Utilities\Router;
 $router = new Router();
 $router->addRoute('/', 'home.php');
 $router->addRoute('/inscription', 'register.php');
-$router->addRoute('/connexion', 'connection.php');
+$router->addRoute('/votre-espace', 'contact.php');
 
 
 //On souhaite récuperer le fichier à executer

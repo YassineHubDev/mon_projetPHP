@@ -8,10 +8,35 @@ class User
 {
     private $email;
     private $password;
-    private $client_nom;
-    private $client_prenom;
-    private $magasin_nom;
+    private $firstname;
+    private $surname;
     private $role;
+
+    public function __construct(?string $firstname='', ?string $surname='', ?string $email='', ?string $password='', ?string $role='')
+    {
+        $this->firstname = $firstname;
+        $this->surname = $surname;
+        $this->email = $email;
+        $this->password = $password;
+        $this->role = $role;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getRole()
+    {
+        return $this->role;
+    }
+
+    /**
+     * @param mixed $role
+     */
+    public function setRole($role)
+    {
+        $this->role = $role;
+    }
+
 
     /**
      * @return mixed
@@ -19,22 +44,6 @@ class User
     public function getEmail()
     {
         return $this->email;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getClientPrenom()
-    {
-        return $this->client_prenom;
-    }
-
-    /**
-     * @param mixed $client_prenom
-     */
-    public function setClientPrenom($client_prenom)
-    {
-        $this->client_prenom = $client_prenom;
     }
 
     /**
@@ -54,70 +63,63 @@ class User
     }
 
     /**
-     * @param mixed $password
+     * Ajoute et hash le mot de passe
+     * @param string $password
      */
-    public function setPassword($password)
+    public function setPassword(string $password): void
     {
+        // Stockage
         $this->password = $password;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getClientNom()
+    public function hashPassword()
     {
-        return $this->client_nom;
-    }
-
-    /**
-     * @param mixed $client_nom
-     */
-    public function setClientNom($client_nom)
-    {
-        $this->client_nom = $client_nom;
+        $this->password = password_hash($this->password, PASSWORD_BCRYPT);
     }
 
     /**
      * @return mixed
      */
-    public function getMagasinNom()
+    public function getFirstname()
     {
-        return $this->magasin_nom;
+        return $this->firstname;
     }
 
     /**
-     * @param mixed $magasin_nom
+     * @param mixed $firstname
      */
-    public function setMagasinNom($magasin_nom)
+    public function setFirstname($firstname)
     {
-        $this->magasin_nom = $magasin_nom;
+        $this->firstname = $firstname;
     }
 
     /**
      * @return mixed
      */
-    public function getRole()
+    public function getSurname()
     {
-        return $this->role;
+        return $this->surname;
     }
 
     /**
-     * @param mixed $role
+     * @param mixed $surname
      */
-    public function setRole($role)
+    public function setSurname($surname)
     {
-        $this->role = $role;
+        $this->surname = $surname;
     }
 
     public function getStrParamsSQL(): string
     {
+        $this->hashPassword();
+
         // On crée un tableau avec les 3 propriétés
         $tab = [
-            htmlentities($this->username),
-            htmlentities($this->firstname),
-        htmlentities($this->surname),
             htmlentities($this->email),
-            htmlentities($this->password)
+            htmlentities($this->password),
+            htmlentities($this->surname),
+            htmlentities($this->firstname),
+            htmlentities($this->role),
         ];
         // On crée une chaîne de caractères séparés de virgules et les quotes simples
         $str = implode("','", $tab);

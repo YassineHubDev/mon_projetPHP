@@ -1,4 +1,5 @@
 <?php
+
 use src\Controller\RegisterController;
 
 
@@ -14,39 +15,20 @@ require 'inc/header.php';
 
 <main class="container">
 
-
     <section id="page1">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="img/upload/cuisine1.jpg" class="d-block w-90" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/upload/cuisine2.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/upload/cuisine3.jpg" class="d-block w-100" alt="...">
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
+
+        <div class="cuisine1">
+            <img src="img/upload/cuisine1.jpg" alt="Belle_cuisine">
         </div>
 
         <div>
             <article>
+
+                <br>
+                <br>
+
                 <h2 class="coeur">Notre coeur de métier</h2>
-                <p>
+                <p class="article1">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad animi beatae commodi harum minus
                     molestias nam praesentium sed sint tenetur. Autem deleniti id ipsam non optio praesentium reiciendis
                     sit tempore? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at commodi
@@ -59,26 +41,34 @@ require 'inc/header.php';
                     ducimus ea eius enim excepturi, harum iusto maxime molestias nisi nobis nulla obcaecati quibusdam
                     temporibus? Accusantium, ea.
                 </p>
-
-                <br>
-
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem dolores in non placeat velit.
-                    Adipisci assumenda consequuntur doloribus ex incidunt, magni nostrum numquam praesentium quasi quos
-                    saepe sint suscipit unde.
-                </p>
             </article>
         </div>
 
     </section>
 
     <section id="page2">
-    </section>
+        <article class="article2">
+            <h2>Tout a commencé en 2000...</h2>
 
-    <section id="page3">
-    </section>
+            <br>
 
-    <section id="page4">
+            <p>
+                ... lorsque Ahmed et Denis (AD), amis de longue date et collègue dans la même entreprise ont décidé de
+                créer AD-installations for Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur corporis
+                dolor
+                doloremque eius esse, eum excepturi illum, laborum magnam, magni minus natus neque nihil nostrum odit
+                pariatur quo
+                recusandae vel. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis fugiat non perferendis
+                quos. Ab atque cum dicta eligendi fugit harum iusto, laborum, molestiae necessitatibus qui sed sit,
+                tenetur totam Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquid distinctio est
+                et eum eveniet fugit hic minima molestiae molestias, nam nostrum odio, quas quia veniam vitae,
+                voluptatum! Harum, voluptates. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi atque
+                dignissimos dolorem explicabo harum in incidunt necessitatibus numquam, rerum sapiente similique
+                temporibus ullam! Corporis delectus deleniti dolore id vero Lorem ipsum dolor sit amet, consectetur
+                adipisicing elit. Accusamus adipisci assumenda atque corporis distinctio eveniet fugit minima minus, nam
+                natus numquam obcaecati quaerat quas quibusdam, quos reiciendis sapiente voluptate voluptates.
+            </p>
+        </article>
     </section>
 
     <section id="page5">
@@ -93,11 +83,8 @@ require 'inc/header.php';
     <section id="page8">
     </section>
 
-    <section id="page9">
-    </section>
-
     <section id="page10">
-        <?php if(isset($success) && $success === 1) : ?>
+        <?php if (isset($success) && $success === 1) : ?>
             <div class="alert alert-success alert-dismissible fade show" role="alert">
                 Inscription réussie !
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -108,21 +95,13 @@ require 'inc/header.php';
 
         <form method="post" action="/#page10">
 
-            <?php  // createInputText('name', 255, "Nom") ?>
-
-            <div class="form-group">
-                <label for="username">Pseudo</label>
-                <input type="text"
-                       class="form-control <?= (isset($errorMessageUserName) && !empty($errorMessageUserName)) ? 'is-invalid' : '' ?>"
-                       id="name" name="name" value="<?= $_POST['name']  ?? '' ?>">
-                <div class="invalid-feedback"><?= $errorMessageUserName ?? "" ?></div>
-            </div>
+            <?php // createInputText('name', 255, "Nom") ?>
 
             <div class="form-group">
                 <label for="surname">Nom</label>
                 <input type="text"
                        class="form-control <?= (isset($errorMessageSurName) && !empty($errorMessageSurName)) ? 'is-invalid' : '' ?>"
-                       id="name" name="name" value="<?= $_POST['name']  ?? '' ?>">
+                       id="surname" name="surname" value="<?= $_POST['surname'] ?? '' ?>">
                 <div class="invalid-feedback"><?= $errorMessageSurName ?? "" ?></div>
             </div>
 
@@ -130,17 +109,16 @@ require 'inc/header.php';
                 <label for="firstname">Prénom</label>
                 <input type="text"
                        class="form-control <?= (isset($errorMessageFirstName) && !empty($errorMessageFirstName)) ? 'is-invalid' : '' ?>"
-                       id="name" name="name" value="<?= $_POST['name']  ?? '' ?>">
+                       id="firstname" name="firstname" value="<?= $_POST['firstname'] ?? '' ?>">
                 <div class="invalid-feedback"><?= $errorMessageFirstName ?? "" ?></div>
             </div>
-
 
 
             <div class="form-group">
                 <label for="email">Email</label>
                 <input type="email"
                        class="form-control <?= (isset($errorMessageEmail) && !empty($errorMessageEmail)) ? 'is-invalid' : '' ?>"
-                       id="name" name="email" value="<?= $_POST['email']  ?? '' ?>">
+                       id="email" name="email" value="<?= $_POST['email'] ?? '' ?>">
                 <div class="invalid-feedback"><?= $errorMessageEmail ?? "" ?></div>
             </div>
 
@@ -148,14 +126,33 @@ require 'inc/header.php';
                 <label for="password">Mot de passe</label>
                 <input type="password"
                        class="form-control <?= (isset($errorMessagePassword) && !empty($errorMessagePassword)) ? 'is-invalid' : '' ?>"
-                       id="password" name="password" value="<?= $_POST['password']  ?? '' ?>">
+                       id="password" name="password" value="<?= $_POST['password'] ?? '' ?>">
                 <div class="invalid-feedback"><?= $errorMessagePassword ?? "" ?></div>
             </div>
 
+            <fieldset class="form-group">
+                <div class="row">
+                    <div class="col-sm-10">
+                        <p>Vous êtes :</p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="role" id="gridRadios1"
+                                   value="magasin" checked>
+                            <label class="form-check-label" for="gridRadios1">
+                                un magasin
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="role" id="gridRadios2"
+                                   value="client">
+                            <label class="form-check-label" for="gridRadios2">
+                                un client
+                            </label>
+
+                            <br>
+                            <br>
 
 
-
-            <input type="submit" value="Créer le produit" class="btn btn-outline-success">
+                            <input type="submit" value="Créer le produit" class="btn btn-outline-success">
 
         </form>
     </section>

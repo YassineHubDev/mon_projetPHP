@@ -27,17 +27,8 @@
                 <a class="nav-link" href="#">Accueil<span class="sr-only">(current)</span></a>
             </li> -->
 
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Qui sommes-nous ?
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#page2">Notre petite histoire</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#page3">Ahmed</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#page4">Denis</a>
-                </div>
+            <li class="nav-item">
+                <a class="nav-link" href="#page2" tabindex="-1" aria-disabled="true">Qui sommes-nous ?</a>
             </li>
 
             <li class="nav-item dropdown">
@@ -55,10 +46,11 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#page9" tabindex="-1" aria-disabled="true">Références</a>
+                <a class="nav-link" href="#page10" tabindex="-1" aria-disabled="true">Inscrivez-vous !</a>
             </li>
+
             <li class="nav-item">
-                <a class="nav-link" href="#page10" tabindex="-1" aria-disabled="true">Votre espace</a>
+                <a class="nav-link" href="/votre-espace" tabindex="-1" aria-disabled="true">Votre espace</a>
             </li>
         </ul>
 
