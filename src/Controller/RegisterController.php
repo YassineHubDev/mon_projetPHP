@@ -33,6 +33,7 @@ class RegisterController
                 // Il n'y a pas d'erreur, on passe à l'inscription
                 $database = new Database();
                 // $database->connect(); appelé directement dans le constructeur
+
                 // On crée un utilisateur en local
                 $user = new User($_POST['firstname'], $_POST['surname'], $_POST['email'], $_POST['password'], $_POST['role']);
                 $query = "INSERT INTO app_user (email, password, client_nom, client_prénom, role) VALUES (" .

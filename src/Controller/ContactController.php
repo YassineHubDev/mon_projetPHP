@@ -20,7 +20,11 @@ class ContactController
             if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $errorMessageEmail = FormValidator::checkPostText('email', 255);
                 $errorMessagePassword = FormValidator::checkPostText('password', 128);
-                if (empty($errorMessageEmail) && empty($errorMessagePassword)) {
+
+                if (empty($errorMessageEmail) &&
+                    empty($errorMessagePassword)
+                ) {
+
                     // Il n'y a pas d'erreur, on passe à l'inscription
                     $database = new Database();
                     // $database->connect(); appelé directement dans le constructeur
@@ -38,13 +42,22 @@ class ContactController
                         $userPassword = $users[0]->getPassword();
                         if (password_verify($_POST['password'], $userPassword)) {
                             $_SESSION['role'] = $users[0]->getRole();
+
+                            $url = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'];
+                            if ($_SESSION['role'] === 'client') {
+                                header('Location: ' . $url . '/mon-espace-prive');
+                            } else {
+                                header('Location: ' . $url . '/espace-magasin');
+                            }
                             var_dump("Connecté !!!");
                         } else {
                             $errorMessagePassword = "Mauvais mot de passe";
                             var_dump("Pas connecté !!!");
                         }
                     }
+
                 }
+
             }
             return compact('errorMessageEmail', 'errorMessagePassword');
         }

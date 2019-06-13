@@ -22,13 +22,12 @@ require 'inc/header.php';
         </div>
 
         <div>
-            <article>
+            <article class="article1">
 
-                <br>
                 <br>
 
                 <h2 class="coeur">Notre coeur de métier</h2>
-                <p class="article1">
+                <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad animi beatae commodi harum minus
                     molestias nam praesentium sed sint tenetur. Autem deleniti id ipsam non optio praesentium reiciendis
                     sit tempore? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at commodi
@@ -37,9 +36,7 @@ require 'inc/header.php';
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, consequatur cumque, explicabo
                     illum maxime praesentium qui quia quibusdam, quo reprehenderit sequi vel. Ad adipisci assumenda
                     neque nesciunt quibusdam sit tenetur?
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi, atque debitis, doloremque
-                    ducimus ea eius enim excepturi, harum iusto maxime molestias nisi nobis nulla obcaecati quibusdam
-                    temporibus? Accusantium, ea.
+
                 </p>
             </article>
         </div>
@@ -48,6 +45,7 @@ require 'inc/header.php';
 
     <section id="page2">
         <article class="article2">
+            <br>
             <h2>Tout a commencé en 2000...</h2>
 
             <br>
@@ -68,6 +66,57 @@ require 'inc/header.php';
                 adipisicing elit. Accusamus adipisci assumenda atque corporis distinctio eveniet fugit minima minus, nam
                 natus numquam obcaecati quaerat quas quibusdam, quos reiciendis sapiente voluptate voluptates.
             </p>
+
+            <div class="icone1">
+
+                <figure>
+                    <img class="engineer1" src="img/upload/drawing.png" alt="">
+                </figure>
+
+                <figure>
+                    <img class="engineer2" src="img/upload/drill.png" alt="">
+                </figure>
+
+                <figure>
+                    <img class="engineer3" src="img/upload/hammer.png" alt="">
+                </figure>
+            </div>
+        </article>
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <article class="article3">
+            <div id="ahmed">
+
+                <figure>
+                    <img class="engineer4" src="img/upload/worker.png" alt="Ahmed">
+                </figure>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto dignissimos doloribus
+                    dolorum enim eos illum ipsum iusto, magni nisi nobis odit, praesentium quasi qui quidem saepe sint
+                    unde! Asperiores? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium harum
+                    officia sint unde vitae. At earum eius esse, inventore ipsum iure magnam necessitatibus odit placeat
+                    possimus praesentium qui, quis voluptatem.
+                </p>
+            </div>
+
+            <div id="denis">
+                <figure>
+                    <img class="engineer5" src="img/upload/worker.png" alt="Denis">
+                </figure>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto dignissimos doloribus
+                    dolorum enim eos illum ipsum iusto, magni nisi nobis odit, praesentium quasi qui quidem saepe sint
+                    unde! Asperiores? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium harum
+                    officia sint unde vitae. At earum eius esse, inventore ipsum iure magnam necessitatibus odit placeat
+                    possimus praesentium qui, quis voluptatem.
+                </p>
+            </div>
+
+
         </article>
     </section>
 
@@ -152,7 +201,7 @@ require 'inc/header.php';
                             <br>
 
 
-                            <input type="submit" value="Créer le produit" class="btn btn-outline-success">
+                            <input type="submit" value="Je m'inscris" class="btn btn-outline-success">
 
         </form>
     </section>

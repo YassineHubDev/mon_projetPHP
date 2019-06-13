@@ -9,6 +9,8 @@ $router = new Router();
 $router->addRoute('/', 'home.php');
 $router->addRoute('/inscription', 'register.php');
 $router->addRoute('/votre-espace', 'contact.php');
+$router->addRoute('/mon-espace-prive', 'client.php');
+$router->addRoute('/espace-magasin', 'magasin.php');
 
 
 //On souhaite récuperer le fichier à executer

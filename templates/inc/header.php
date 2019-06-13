@@ -16,7 +16,7 @@
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#page1">AD-Installations</a>
+    <a class="navbar-brand" href="/">AD-Installations</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -28,7 +28,7 @@
             </li> -->
 
             <li class="nav-item">
-                <a class="nav-link" href="#page2" tabindex="-1" aria-disabled="true">Qui sommes-nous ?</a>
+                <a class="nav-link" href="/#page2" tabindex="-1" aria-disabled="true">Qui sommes-nous ?</a>
             </li>
 
             <li class="nav-item dropdown">
@@ -46,7 +46,7 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#page10" tabindex="-1" aria-disabled="true">Inscrivez-vous !</a>
+                <a class="nav-link" href="/#page10" tabindex="-1" aria-disabled="true">Inscrivez-vous !</a>
             </li>
 
             <li class="nav-item">
