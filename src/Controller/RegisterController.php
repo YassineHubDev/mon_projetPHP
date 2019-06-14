@@ -43,9 +43,16 @@ class RegisterController
                 try {
                     //On essaye d'insérer en BDD
                     $success = $database->exec($query);
-                    if($success === 1) {
+
+                    $_SESSION['role'] = $_POST['role'];
+                    if ($success === 1) {
                         $url = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'];
-                        header('Location: '.$url.'/#page1');
+
+                        if ($_POST['role'] === 'client') {
+                            header('Location: ' . $url . '/mon-espace-prive');
+                        } else {
+                            header('Location: ' . $url . '/espace-magasin');
+                        }
                     }
 
                 } catch (\PDOException $e) {

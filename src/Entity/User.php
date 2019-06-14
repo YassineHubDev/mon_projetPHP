@@ -115,10 +115,10 @@ class User
 
         // On crée un tableau avec les 3 propriétés
         $tab = [
-            htmlentities($this->email),
-            htmlentities($this->password),
-            htmlentities($this->surname),
-            htmlentities($this->firstname),
+            htmlentities($this->email, ENT_QUOTES),
+            htmlentities($this->password, ENT_QUOTES),
+            htmlentities($this->surname, ENT_QUOTES),
+            htmlentities($this->firstname, ENT_QUOTES),
             htmlentities($this->role),
         ];
         // On crée une chaîne de caractères séparés de virgules et les quotes simples

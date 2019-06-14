@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require dirname(__DIR__) . '/autoload.php';
 
 //Appel du routeur

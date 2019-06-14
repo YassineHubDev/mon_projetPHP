@@ -43,6 +43,9 @@ class ContactController
                         if (password_verify($_POST['password'], $userPassword)) {
                             $_SESSION['role'] = $users[0]->getRole();
 
+
+                            /*var_dump($_SESSION['role']);
+                            die('d');*/
                             $url = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'];
                             if ($_SESSION['role'] === 'client') {
                                 header('Location: ' . $url . '/mon-espace-prive');
